@@ -1,0 +1,8 @@
+Flask==3.0.3
+Flask-Cors==4.0.1
+SQLAlchemy==2.0.31
+scikit-learn==1.5.0
+numpy>=1.26.0
+pandas>=2.2.0
+joblib>=1.4.2
+python-dotenv==1.0.1

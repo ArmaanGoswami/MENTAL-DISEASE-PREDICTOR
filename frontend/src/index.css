@@ -1,0 +1,222 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* Vibrant Neumorphic Color Matrix */
+    --bg-main: #ebf1f8;
+    --card-bg: #f1f6fc;
+    --card-surface: #ffffff;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --accent-teal: #0d9488;
+    --accent-indigo: #4f46e5;
+    --accent-purple: #7c3aed;
+    
+    /* Vibrant Neumorphic Sculpted Shadows (Crisp Specular White + Chromatic Slate-Blue) */
+    --nm-flat: 8px 8px 20px #c2d2e4, -8px -8px 20px #ffffff;
+    --nm-flat-sm: 4px 4px 10px #c5d4e5, -4px -4px 10px #ffffff;
+    --nm-flat-hover: 12px 12px 24px #b4c7dc, -12px -12px 24px #ffffff, 0 0 20px rgba(79, 70, 229, 0.15);
+    --nm-inset: inset 4px 4px 9px #c2d2e4, inset -4px -4px 9px #ffffff;
+    --nm-btn: 5px 5px 12px #c2d2e4, -5px -5px 12px #ffffff;
+    --nm-border: rgba(255, 255, 255, 0.85);
+    --nm-glow: 0 0 25px rgba(13, 148, 136, 0.25);
+    --nm-radius: 1.5rem;
+    --emotion-aura: rgba(79, 70, 229, 0.12);
+  }
+
+  /* 🪶 VIBRANT EMOTION 1: ZEN BUOYANT (Luminous Fresh Spring Mint & Aqua) */
+  [data-emotion="buoyant"] {
+    --bg-main: #e6f7f4;
+    --card-bg: #eefbf8;
+    --card-surface: #ffffff;
+    --nm-flat: 10px 10px 24px #b8e7df, -10px -10px 24px #ffffff, 0 0 25px rgba(13, 148, 136, 0.18);
+    --nm-flat-sm: 5px 5px 12px #b8e7df, -5px -5px 12px #ffffff;
+    --nm-flat-hover: 14px 14px 28px #a8ded5, -14px -14px 28px #ffffff, 0 0 35px rgba(13, 148, 136, 0.28);
+    --nm-inset: inset 4px 4px 10px #b8e7df, inset -4px -4px 10px #ffffff;
+    --nm-btn: 6px 6px 14px #b8e7df, -6px -6px 14px #ffffff;
+    --nm-border: rgba(255, 255, 255, 0.95);
+    --nm-glow: 0 0 25px rgba(13, 148, 136, 0.35);
+    --nm-radius: 2rem;
+    --emotion-aura: rgba(13, 148, 136, 0.18);
+  }
+
+  /* ⚖️ VIBRANT EMOTION 2: HARMONIC EQUILIBRIUM (Vibrant Sky & Royal Indigo) */
+  [data-emotion="equilibrium"] {
+    --bg-main: #ebf1f8;
+    --card-bg: #f1f6fc;
+    --card-surface: #ffffff;
+    --nm-flat: 8px 8px 20px #c2d2e4, -8px -8px 20px #ffffff;
+    --nm-flat-sm: 4px 4px 10px #c5d4e5, -4px -4px 10px #ffffff;
+    --nm-flat-hover: 12px 12px 24px #b4c7dc, -12px -12px 24px #ffffff;
+    --nm-inset: inset 4px 4px 9px #c2d2e4, inset -4px -4px 9px #ffffff;
+    --nm-btn: 5px 5px 12px #c2d2e4, -5px -5px 12px #ffffff;
+    --nm-border: rgba(255, 255, 255, 0.9);
+    --nm-glow: 0 0 25px rgba(79, 70, 229, 0.25);
+    --nm-radius: 1.5rem;
+    --emotion-aura: rgba(79, 70, 229, 0.15);
+  }
+
+  /* ⚡ VIBRANT EMOTION 3: HYPER-VIGILANT AGITATION (Vibrant Sunset Coral & Warm Amber) */
+  [data-emotion="agitated"] {
+    --bg-main: #fef1e8;
+    --card-bg: #fff7f2;
+    --card-surface: #ffffff;
+    --nm-flat: 7px 7px 18px #ffd8c4, -7px -7px 18px #ffffff, 0 0 25px rgba(249, 115, 22, 0.18);
+    --nm-flat-sm: 4px 4px 10px #ffd8c4, -4px -4px 10px #ffffff;
+    --nm-flat-hover: 10px 10px 22px #ffc8ac, -10px -10px 22px #ffffff, 0 0 30px rgba(249, 115, 22, 0.3);
+    --nm-inset: inset 5px 5px 11px #ffd8c4, inset -5px -5px 11px #ffffff;
+    --nm-btn: 5px 5px 12px #ffd8c4, -5px -5px 12px #ffffff;
+    --nm-border: rgba(255, 255, 255, 0.95);
+    --nm-glow: 0 0 25px rgba(249, 115, 22, 0.35);
+    --nm-radius: 1rem;
+    --emotion-aura: rgba(249, 115, 22, 0.2);
+  }
+
+  /* 🌑 VIBRANT EMOTION 4: GRAVITATIONAL BURNOUT (Rich Royal Lavender & Violet Soft UI) */
+  [data-emotion="gravitational"] {
+    --bg-main: #f4eeff;
+    --card-bg: #f9f5ff;
+    --card-surface: #ffffff;
+    --nm-flat: 11px 11px 24px #d9c8f3, -11px -11px 24px #ffffff, 0 0 25px rgba(168, 85, 247, 0.2);
+    --nm-flat-sm: 5px 5px 12px #d9c8f3, -5px -5px 12px #ffffff;
+    --nm-flat-hover: 15px 15px 30px #cbb5ec, -15px -15px 30px #ffffff;
+    --nm-inset: inset 6px 6px 14px #d9c8f3, inset -6px -6px 14px #ffffff;
+    --nm-btn: 6px 6px 14px #d9c8f3, -6px -6px 14px #ffffff;
+    --nm-border: rgba(255, 255, 255, 0.95);
+    --nm-glow: 0 0 30px rgba(168, 85, 247, 0.3);
+    --nm-radius: 1.25rem;
+    --emotion-aura: rgba(168, 85, 247, 0.2);
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+    transition: background-color 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+/* Vibrant Neumorphism Component Classes */
+.neuro-flat {
+  background: var(--card-bg);
+  box-shadow: var(--nm-flat);
+  border: 1px solid var(--nm-border);
+  border-radius: var(--nm-radius);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.neuro-flat-sm {
+  background: var(--card-bg);
+  box-shadow: var(--nm-flat-sm);
+  border: 1px solid var(--nm-border);
+  border-radius: calc(var(--nm-radius) * 0.75);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.neuro-inset {
+  background: var(--card-bg);
+  box-shadow: var(--nm-inset);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: calc(var(--nm-radius) * 0.75);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.neuro-btn {
+  background: var(--card-bg);
+  box-shadow: var(--nm-btn);
+  border: 1px solid var(--nm-border);
+  border-radius: calc(var(--nm-radius) * 0.65);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.neuro-btn:hover {
+  box-shadow: var(--nm-flat-hover);
+  transform: translateY(-1px);
+}
+
+.neuro-btn:active, .neuro-btn-pressed {
+  background: var(--bg-main);
+  box-shadow: var(--nm-inset);
+  transform: translateY(1px);
+}
+
+.neuro-pill-active {
+  background: linear-gradient(135deg, var(--emotion-aura), rgba(255, 255, 255, 0.8));
+  box-shadow: var(--nm-inset), var(--nm-glow);
+  border: 1px solid rgba(79, 70, 229, 0.3);
+  border-radius: 9999px;
+  transition: all 0.4s ease;
+}
+
+/* Crisp Slate Text Typography in Vibrant Mode */
+.text-neutral-100 {
+  color: #0f172a !important; /* Deep Slate 900 */
+}
+.text-neutral-200 {
+  color: #1e293b !important; /* Slate 800 */
+}
+.text-neutral-300 {
+  color: #334155 !important; /* Slate 700 */
+}
+.text-neutral-400 {
+  color: #64748b !important; /* Slate 500 */
+}
+.text-neutral-500 {
+  color: #94a3b8 !important; /* Slate 400 */
+}
+
+/* Subtle Specular Border Adjustments */
+.border-white\/5, .border-white\/10 {
+  border-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Modal & Inset Backgrounds in Vibrant Soft UI */
+.bg-black\/70, .bg-black\/75, .bg-black\/80 {
+  background-color: rgba(15, 23, 42, 0.45) !important;
+}
+.bg-black\/30, .bg-black\/40 {
+  background-color: rgba(226, 232, 240, 0.7) !important;
+}
+
+/* Inputs & Form Elements in Vibrant Soft UI */
+input, textarea {
+  color: #0f172a !important;
+}
+input::placeholder, textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Antigravity Breathing Bubble Animation */
+@keyframes breathingPulse {
+  0%, 100% {
+    transform: scale(0.88);
+    box-shadow: 0 0 15px rgba(13, 148, 136, 0.25), inset 0 0 15px rgba(13, 148, 136, 0.25);
+  }
+  50% {
+    transform: scale(1.15);
+    box-shadow: 0 0 45px rgba(13, 148, 136, 0.5), inset 0 0 30px rgba(79, 70, 229, 0.4);
+  }
+}
+
+.animate-breathing {
+  animation: breathingPulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Vibrant Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0d9488;
+}
